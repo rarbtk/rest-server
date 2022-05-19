@@ -2,13 +2,18 @@ const express = require("express");
 const cors = require("cors");
 require("dotenv").config();
 const router = require("../routes/user");
-
+const{coneccion} = require("../database/config")
 class Server {
   constructor() {
     this.app = express();
+    this.conectarData()
     this.middleware();
     this.routes();
   }
+
+async  conectarData(){
+await coneccion()  
+}
 
   middleware() {
     this.app.use(cors());

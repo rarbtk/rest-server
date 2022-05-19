@@ -1,11 +1,6 @@
 const {response} = require("express")
-
 const usersGet = (req, res = response) => {
-const {name,lastname} = req.query
-  res.json({
-      msg: "haciendo get",
-      name,lastname
-  });
+res.render("index")
 };
 
 const userPut = (req, res = response) => {
