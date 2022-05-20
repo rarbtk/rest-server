@@ -1,3 +1,4 @@
+const mongoose = require("mongoose")
 const { Schema, model } = mongoose;
 
 const personaSchema = new Schema({
@@ -21,11 +22,15 @@ const personaSchema = new Schema({
   img: {
     type: String,
   },
-  role: {
+  state: {
     type: String,
     required: true,
-    emun: ["Amind_role", "User_role"],
+    emun: ["ADMIN", "USER"],
   },
+  google:{
+    type: Boolean,
+    default: false
+  }
 });
 
 module.exports = model("personas", personaSchema);

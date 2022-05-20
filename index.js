@@ -1,5 +1,5 @@
 const express = require('express')
-const servidor = require("./server/server")
+const servidor = require("./models/server")
 const servicio = new servidor()
 
 servicio.listen()

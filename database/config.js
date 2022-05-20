@@ -1,8 +1,4 @@
-const async = require("hbs/lib/async");
 const Dbconecction = require("mongoose")
-const { Schema } = mongoose;
-
-
 
 const coneccion = async ()=>{
 
